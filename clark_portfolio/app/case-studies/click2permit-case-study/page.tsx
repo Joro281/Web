@@ -1,5 +1,5 @@
 import React from "react";
-import ScrollLoadingBar from "@/app/components/ui/ScrollLoadingBar";
+import ScrollLoadingBar from "../../components/ui/ScrollLoadingBar";
 import SlideUpFooter from "@/app/components/ui/SlideUpFooter";
 import Link from "next/link";
 import Image from "next/image";
