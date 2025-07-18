@@ -1,26 +1,27 @@
 import React, { useState, useEffect } from 'react';
 
+// Move steps outside the component
+const steps = [
+  { text: 'Welcome to My Portfolio', delay: 600 },
+  { text: '', delay: 200 },
+  { text: '\ud83d\udc64 user@portfolio:~$ Hello, I am Clark Joross Lim. A Web Developer.', delay: 400 },
+  { text: '', delay: 200 },
+  { text: '\ud83d\udc64 user@portfolio:~$ whoami', delay: 300 },
+  { text: '', delay: 200 },
+  {
+    text: 'Computer Engineering graduate with expertise in hardware design, web development, embedded systems, and IoT solutions.',
+    delay: 400
+  },
+  {
+    text: 'Driven by a passion for transforming complex technical challenges into innovative, user-centered applications that bridge the gap between engineering excellence and intuitive design.',
+    delay: 400
+  }
+];
+
 const HomeWeb = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentStep, setCurrentStep] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
-
-  const steps = [
-    { text: 'Welcome to My Portfolio', delay: 600 },
-    { text: '', delay: 200 },
-    { text: '👤 user@portfolio:~$ Hello, I am Clark Joross Lim. A Web Developer.', delay: 400 },
-    { text: '', delay: 200 },
-    { text: '👤 user@portfolio:~$ whoami', delay: 300 },
-    { text: '', delay: 200 },
-    {
-      text: 'Computer Engineering graduate with expertise in hardware design, web development, embedded systems, and IoT solutions.',
-      delay: 400
-    },
-    {
-      text: 'Driven by a passion for transforming complex technical challenges into innovative, user-centered applications that bridge the gap between engineering excellence and intuitive design.',
-      delay: 400
-    }
-  ];
 
   useEffect(() => {
     if (currentStep < steps.length) {
