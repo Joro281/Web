@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollLoadingBar from "../../components/ui/ScrollLoadingBar";
-import SlideUpFooter from "@/app/components/ui/SlideUpFooter";
+import SlideUpFooter from "../../components/ui/SlideUpFooter";
 import Link from "next/link";
 import Image from "next/image";
 import { Github } from "lucide-react";

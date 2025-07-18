@@ -47,7 +47,7 @@ const HomeWeb = () => {
 
       return () => clearInterval(timer);
     }
-  }, [currentStep]);
+  }, [currentStep, steps.length]);
 
   useEffect(() => {
     const cursorTimer = setInterval(() => {

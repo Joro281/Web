@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 const commands: Record<string, string> = {
   help: `Available commands:\n  - projects: List projects\n  - hobbies: Show hobbies\n  - education: Show education history\n  - courses: Show courses taken\n  - certificates: Show certificates\n  - number: Show contact number\n  - quote: Show favorite quote\n  - clear: Clear the terminal\n  - help: Show this help message`,
@@ -63,10 +64,13 @@ const AboutPage = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div className="space-y-8 flex flex-col items-center lg:items-start">
           <h1 className="text-4xl sm:text-5xl font-bold text-green-400 text-glow leading-tight">About Me</h1>
-          <img
+          <Image
             src="/images/about/Clark.jpg"
             alt="Clark Joross Lim"
+            width={320}
+            height={320}
             className="w-80 h-80 rounded-lg border-2 border-green-400 object-cover hover:scale-105 hover:shadow-[0_0_30px_rgba(74,222,128,0.4)] transition-all duration-300"
+            priority
           />
           <div className="text-center lg:text-left text-green-300 max-w-md">
             <div className="text-green-400 mb-4 font-medium text-lg">👤user@portfolio:~$cat profile.txt</div>

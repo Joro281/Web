@@ -6,19 +6,20 @@ interface LoadingScreenProps {
   onComplete: () => void;
 }
 
+// Move bootSequence outside the component
+const bootSequence = [
+  "Initializing portfolio system...",
+  "Loading Clark Lim's profile...",
+  "Connecting to servers...",
+  "Setting up terminal interface...",
+  "Ready to launch portfolio!",
+  "Press ENTER to continue..."
+];
+
 const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
   const [currentStep, setCurrentStep] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   
-  const bootSequence = [
-    "Initializing portfolio system...",
-    "Loading Clark Lim's profile...",
-    "Connecting to servers...",
-    "Setting up terminal interface...",
-    "Ready to launch portfolio!",
-    "Press ENTER to continue..."
-  ];
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentStep(prev => {

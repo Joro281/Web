@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -38,8 +38,8 @@ const Contact = () => {
           setAnimationClass("animate-slide-in-right");
           setForm({ name: "", email: "", message: "" });
         },
-        (error) => {
-          console.error(error.text);
+        (error: unknown) => {
+          console.error(error);
           setStatus("error");
           setShowAlert(true);
           setAnimationClass("animate-slide-in-right");
